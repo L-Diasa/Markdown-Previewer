@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+:root {
+  --outerBackgroungdColor: #4d4099;
+  --innerBackgroungdColor: #f1cdce;
+  --containerContour: #57bab6;
+  --shadow: 1px 1px 10px 2px darken(var(--containerContour), 20%);
+  --default-border: 1px solid darken(var(--containerContour), 35%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--outerBackgroungdColor);
+  color: var(--containerContour);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  margin: 0 auto 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+}
+
+.input, .output {
+  width: 48%;
+  color: var(--containerContour)
+}
+
+#editor, #preview {
+  background-color: var(--innerBackgroungdColor);
+  color: var(--outerBackgroungdColor);
+  border: 0.5px solid var(--containerContour);
+  width: 100%;
+  padding: 5vh;
+  height: 85vh;
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 3px 4px 2px 0px var(--containerContour);
+}
